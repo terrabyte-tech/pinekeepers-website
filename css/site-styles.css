@@ -1,0 +1,68 @@
+/* site styles */
+body, footer{
+  /* background-color:#82bc99; */
+}
+body{
+  background-image:url(../img/pinesweeper-trees-dark-background.png);
+  background-position:bottom;
+  background-repeat: repeat-x;
+  background-size:600px;
+}
+footer{
+  background-color:transparent;
+  font-size:16px;
+}
+
+
+/* hero */
+#pinekeepers-logo{
+  width:100%;
+  max-width:150px;
+  height:100px;
+  /* background-image:url(../img/pinesweeper-title.png); */
+  background-image:url(../img/pine-keepers-title-image-trans.png);
+}
+
+#video-link{
+  width:100%;
+  max-width:250px;
+  height:200px;
+}
+.computer-container{
+  background-image:url(../img/pc-computer-play-arrow.gif);
+  width:100%;
+  height:100%;
+  position:relative;
+}
+iframe{
+  /* position:absolute; */
+  /* top:50%; */
+  /* left:50%; */
+  /* transform:translate(-50%, -50%); */
+  max-width:95vw;
+}
+
+/* modal/popup */
+.modal-section{
+  opacity:0;
+  pointer-events:none;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:10;
+  background-color:rgba(0,0,0,.75);
+  user-select:none;
+}
+.show-modal .modal-section{
+  opacity:1;
+  pointer-events:all;
+}
+#close-modal-button img{
+  position:absolute;
+  top:40px;
+  right:40px;
+  width:30px;
+  /* cursor:pointer; */
+}
