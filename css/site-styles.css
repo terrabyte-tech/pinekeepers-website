@@ -4,6 +4,7 @@ body, footer{
 }
 body{
   background-image:url(../img/pinesweeper-trees-dark-background.png);
+  /* background-color:red; */
   background-position:bottom;
   background-repeat: repeat-x;
   background-size:600px;
