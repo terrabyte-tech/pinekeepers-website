@@ -72,6 +72,11 @@ iframe{
   min-height:auto;
   padding-bottom:60px;
 }
+.pinekeepers-loading-anim{
+  background-image:url('/img/pinesweeper-loading-animation-small-trans.gif');
+  width:400px;
+  height:400px;
+}
 .newsletter-container{
   max-width:500px;
   position:relative;
@@ -96,11 +101,13 @@ iframe{
 /* ================================== */
 /* footer (overwrite shared) */
 footer{
-  background-color:transparent;
+  background-color:#111111;
   /* font-size:16px; */
 }
 #cookie-footer{
-  background-color:#8ab97f;
+  /* background-color:#8ab97f; */
+  background-color:#717a62;
+  background-color:#333333;
 }
 .footer-logo.pinekeepers-logo{
   width:105px;
