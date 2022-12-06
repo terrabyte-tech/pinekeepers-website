@@ -2,6 +2,8 @@
 
 window.addEventListener("load", function(){
 
+  console.log("scripts.js loaded");
+
   var videoLink = document.getElementById("video-link");
 
   videoLink.addEventListener("click", function(){
@@ -16,7 +18,7 @@ window.addEventListener("load", function(){
     vid.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
     vid.setAttribute("allowfullscreen", "0");
 
-    vid.setAttribute("src", "https://www.youtube.com/embed/yMjbeoKseuA?autoplay=1");
+    vid.setAttribute("src", "https://www.youtube-nocookie.com/embed/yMjbeoKseuA?autoplay=1");
 
 
     document.getElementById("video-modal").appendChild(vid);
