@@ -110,7 +110,8 @@ footer{
   background-color:#333333;
 }
 .footer-logo.pinekeepers-logo{
-  width:105px;
+  width: 115px;
+  height: 40px;
   /* height:; */
   /* height:100px; */
   /* background-image:url(../img/pinesweeper-title.png); */
