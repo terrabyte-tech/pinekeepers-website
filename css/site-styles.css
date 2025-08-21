@@ -1,119 +1,22 @@
-/* site styles */
+/* +++++++++++++++++++++++++++++++++++++++++++ */
 
-
-/* ================================== */
-/* video section (video hero) */
-#video-section{
-  background-image:url(../img/pinesweeper-trees-dark-background.png);
-  background-position:bottom;
-  background-repeat: repeat-x;
-  background-size:600px;
-  height:100vh;
-  min-height:auto;
-  max-height:1000px;
-}
-/* hero */
-#pinekeepers-logo{
-  width:100%;
-  max-width:150px;
-  height:100px;
-  /* background-image:url(../img/pinesweeper-title.png); */
-  background-image:url(../img/pine-keepers-title-image-trans.png);
+/* css variables */
+:root{
+  --background: #ffffff;
+  --HCbackground: #ffffff;
+  --foreground: #333333;
+  --HCforeground: #000000;
+  --accent: #0A8C61;
+  --HCaccent: #096242;
 }
 
-#video-link{
-  width:100%;
-  max-width:250px;
-  height:200px;
-}
-.computer-container{
-  background-image:url(../img/pc-computer-play-arrow.gif);
-  width:100%;
-  height:100%;
-  position:relative;
-}
-iframe{
-  max-width:95vw;
-}
-/* ================================== */
+/* layout */
 
+/* other elements */
 
-/* ================================== */
-/* video player modal/popup */
-.modal-section{
-  opacity:0;
-  pointer-events:none;
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  z-index:10;
-  background-color:rgba(0,0,0,.75);
-  user-select:none;
-}
-.show-modal .modal-section{
-  opacity:1;
-  pointer-events:all;
-}
-#close-modal-button img{
-  position:absolute;
-  top:40px;
-  right:40px;
-  width:30px;
-}
-/* ================================== */
-
-
-/* ================================== */
-/* newsletter section */
-#newsletter-section{
-  background-color:#111111;
-  min-height:auto;
-  padding-bottom:60px;
-}
-.pinekeepers-loading-anim{
-  background-image:url('/img/pinesweeper-loading-animation-small-trans.gif');
-  width:170px;
-  height:170px;
-}
-.newsletter-container{
-  max-width:500px;
-  position:relative;
-}
-.newsletter-form{
-  /* margin-left:50px; */
-  margin-top:50px;
-}
-
-.form-row{
-  margin-bottom:20px;
-}
-.form-row label{
-  margin-right:10px;
-}
-.force-one-line{
-  display:inline-block;
-}
-/* ================================== */
-
-
-/* ================================== */
-/* footer (overwrite shared) */
-footer{
-  background-color:#111111;
-  /* font-size:16px; */
-}
-#cookie-footer{
-  /* background-color:#8ab97f; */
-  background-color:#717a62;
-  background-color:#333333;
-}
-.footer-logo.pinekeepers-logo{
-  width: 115px;
-  height: 40px;
-  /* height:; */
-  /* height:100px; */
-  /* background-image:url(../img/pinesweeper-title.png); */
-  background-image:url(/img/pine-keepers-title-image-trans.png);
+/* responsive */
+@media only screen and (max-width: 600px){
+  body{
+    /*  */
+  }
 }
