@@ -9,7 +9,7 @@
   "backgroundColor": "#333333",
   "foregroundColor": "#ffffff",
   "styleType": "pixel",
-  "schemaType": "Thing",
+  "schemaType": "Product",
   "fontsRel": "https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Manrope:wght@400;800&display=swap",
   "iconsRel": "https://unpkg.com/phosphor-icons"
 }
