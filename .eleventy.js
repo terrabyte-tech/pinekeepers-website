@@ -3,10 +3,7 @@ const site = require("./_data/site.json");
 
 module.exports = function (eleventyConfig) {
   // copy site data
-  // eleventyConfig.addPassthroughCopy('htaccess.txt');
   // eleventyConfig.addPassthroughCopy('.htaccess');
-  // eleventyConfig.addPassthroughCopy('robots.txt');
-  // eleventyConfig.addPassthroughCopy('sitemap.xml');
   // copy directories to the output
   eleventyConfig.addPassthroughCopy('css');
   eleventyConfig.addPassthroughCopy('js');
@@ -20,8 +17,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget('css');
   eleventyConfig.addWatchTarget('js');
   eleventyConfig.addWatchTarget('img');
-  // eleventyConfig.addWatchTarget('site.webmanifest');
-
 
   // page transforms and filters
 
@@ -65,7 +60,7 @@ module.exports = function (eleventyConfig) {
 <nav class="sr-only sr-toc" aria-label="Table of Contents" role="navigation">
   <h2>Page Table of Contents</h2>
   <ul>
-    <li><a class="text-link" href="#top">Jump to top</a></li>
+    <li><a class="text-link" href="#top">Jump to content</a></li>
     ${sections.map(s => `<li><a href="#${s.id}" class="text-link" tabindex="0">${s.title}</a></li>`).join("\n")}
   </ul>
 </nav>
