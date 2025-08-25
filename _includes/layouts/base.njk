@@ -55,19 +55,21 @@
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  {# <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Manrope:wght@400;800&display=swap" rel="stylesheet"> #}
+  <link href="{{ site.fontsRel }}" rel="stylesheet">
 
   <!-- icons -->
-  {# <script src="https://unpkg.com/phosphor-icons"></script> #}
+  <script src="{{ site.iconsRel }}"></script>
 
   <!-- frameworks -->
   <link rel="stylesheet" type="text/css" href="https://au.goldenharpmedia.com/framework/packages/v1.0/au.css">
 
   <!-- shared Terrabyte styles -->
-  <link rel="stylesheet" href="https://terrabyte.eco/css/shared-org-styles.css">
+  <link rel="stylesheet" href="https://www.terrabyte.eco/css/shared-org-styles.css">
 
   <!-- shared pixel site styles (if applicable) -->
-  {# <link rel="stylesheet" href="https://terrabyte.eco/css/shared-pixel-styles.css"> #}
+  {% if site.styleType == "pixel" %}
+    <link rel="stylesheet" href="https://www.terrabyte.eco/css/shared-pixel-styles.css">
+  {% endif %}
 
   <!-- shared project styles -->
   {# <link rel="stylesheet" href="https://canapi.io/css/shared-styles.css"> #}
@@ -75,12 +77,12 @@
   <!-- site styles -->
   <link rel="stylesheet" href="/css/site-styles.css">
 
-  {# conditional styles #}
-  {% if testPage %}
-    <link href="/css/test-styles.css" rel="stylesheet" type="text/css" />
-  {% else %}
+  {# other conditional styles #}
+  {# {% if testPage %} #}
+    {# <link href="/css/test-styles.css" rel="stylesheet" type="text/css" /> #}
+  {# {% else %} #}
     {# <link href="/css/other-styles.css" rel="stylesheet" type="text/css" /> #}
-  {% endif %}
+  {# {% endif %} #}
 
 <!--------->
 <!-- js -->
@@ -90,17 +92,25 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Thing",
+      "@type": "{{ site.schemaType | default('Thing') }}",
+      "name": "{{ site.project }}",
+      "url": "{{ site.url }}",
+      "logo": "{{ site.url }}/img/meta/logo.png",
+      "description": "{% if subdescription %}{{ subdescription }}{% else %}{{ site.description }}{% endif %}"
+    }
+    {# {
+      "@context": "https://schema.org",
+      "@type": "{{ site.schemaType | default('Thing') }}",
       "name": "{{ site.project }}",
       "url": "{{ site.url }}",
       "logo": "{{ site.url }}/img/meta/logo.png",
       "sameAs": ["https://instagram.com/terrabyte_tech", "https://mastodon.eco/@terrabyte", "https://app.wedonthavetime.org/profile/Terrabyte", "https://www.linkedin.com/company/terrabyte-tech/", "https://www.youtube.com/@TerrabyteEco", "https://profiles.eco/terrabyte", "https://github.com/terrabyte-tech", "https://patreon.com/terrabyte_tech"],
       "description": "{% if subdescription %}{{ subdescription }}{% else %}{{ site.description }}{% endif %}"
-    }
+    } #}
   </script>
 
   <!-- shared Terrabyte scripts -->
-  <script src="https://terrabyte.eco/js/shared-scripts.js"></script>
+  <script src="https://www.terrabyte.eco/js/shared-scripts.js"></script>
 
   <!-- site scripts -->
   <script src="/js/scripts.js"></script>
@@ -116,7 +126,7 @@
   <!-- <script type="text/javascript" data-canapi-init data-host="https://app.canapi.io" src="https://app.canapi.io/canapi.js" defer></script> -->
 
 </head>
-<body>
+<body data-theme="dark">
 
 {# ########## #}
 {# dependencies #}
@@ -144,10 +154,16 @@
 
   <a name="top"></a>
   {% include "header.njk" %}
+
   <main>
     {{ content | safe }}
   </main>
-  {% include "footer.njk" %}
-  
+
+  <a name="footer"></a>
+  {% if site.styleType == "pixel" %}
+    {% include "pixel-footer.njk" %}
+  {% else %}
+    {% include "footer.njk" %}
+  {% endif %}
 </body>
 </html>
